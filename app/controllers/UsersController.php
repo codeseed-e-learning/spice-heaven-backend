@@ -8,4 +8,8 @@ class UsersController extends Controller {
         print_r(json_encode($dishes));
 
     }
+    public function insertUser(){
+        echo "hello world";
+
+    }
 }

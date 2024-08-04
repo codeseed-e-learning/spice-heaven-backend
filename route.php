@@ -10,7 +10,10 @@ $routes = [
     'contact' => 'ContactController@showContactForm',
     'users' => 'UsersController@index',
     'restaurant' => 'Restaurant@onboard',
-    'onboard-restaurant' => 'RestaurantController@onboardRestaurant'
+    'onboard-restaurant' => 'RestaurantController@onboardRestaurant',
+    'all-cities' => 'CityController@getCities',
+    'insertUser' => 'UsersController@insertUser',
+    'restos' => 'RestaurantController@allRestos'
     // Add more routes here
 ];
 

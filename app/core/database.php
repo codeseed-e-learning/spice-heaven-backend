@@ -35,7 +35,7 @@ class Database
         }
     }
 
-    public function getConnection(): ?mysqli
+    public function getConnection(): ?mysqli 
     {
         return $this->mysqli;
     }
@@ -44,6 +44,20 @@ class Database
     {
         return $this->error;
     }
+}
+
+// Allow all origins
+header("Access-Control-Allow-Origin: *");
+
+// Allow specific HTTP methods
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+
+// Allow specific headers
+header("Access-Control-Allow-Headers: Content-Type, Authorization");
+
+// If the request method is OPTIONS, exit early (this is for preflight requests)
+if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+    exit(0);
 }
 
 ?>
